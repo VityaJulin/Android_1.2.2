@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Андроид_1.2.2</string>
+    <string name="header_text">Просмотр фото</string>
+    <string name="btn1_text">Назад</string>
+    <string name="btn2_text">Вперед</string>
+</resources>
