@@ -10,9 +10,9 @@ import android.widget.TextView;
 
 
 public class MainActivity extends AppCompatActivity {
-    private TextView urlText;
-    private Button btnPrev;
-    private Button btnNext;
+    private TextView urlText = findViewById(R.id.urlText);
+    private Button btnPrev = findViewById(R.id.button1);
+    private Button btnNext = findViewById(R.id.button2);
     private String pictureUrl = "http://myfile.org/";
 
 
@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        init();
+
         int pictureIndex = (int) (Math.random() * 101);
         urlText.setText(pictureUrl + pictureIndex);
 
@@ -39,12 +39,5 @@ public class MainActivity extends AppCompatActivity {
                 finish();
             }
         });
-
-    }
-
-    private void init() {
-        btnPrev = findViewById(R.id.button1);
-        btnNext = findViewById(R.id.button2);
-        urlText = findViewById(R.id.urlText);
     }
 }
