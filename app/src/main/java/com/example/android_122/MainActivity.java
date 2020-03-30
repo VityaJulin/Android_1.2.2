@@ -10,16 +10,21 @@ import android.widget.TextView;
 
 
 public class MainActivity extends AppCompatActivity {
-    private TextView urlText = findViewById(R.id.urlText);
-    private Button btnPrev = findViewById(R.id.button1);
-    private Button btnNext = findViewById(R.id.button2);
-    private String pictureUrl = "http://myfile.org/";
+    private TextView urlText;
+    private Button btnPrev;
+    private Button btnNext;
+    private String pictureUrl;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        urlText = findViewById(R.id.urlText);
+        btnPrev = findViewById(R.id.button1);
+        btnNext = findViewById(R.id.button2);
+        pictureUrl = "http://myfile.org/";
 
         int pictureIndex = (int) (Math.random() * 101);
         urlText.setText(pictureUrl + pictureIndex);
